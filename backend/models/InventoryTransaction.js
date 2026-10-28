@@ -14,15 +14,10 @@ const inventoryTransactionSchema = new mongoose.Schema(
       enum: ["restock", "sale", "return", "adjustment"],
       required: true
     },
-
     quantity: {
       type: Number,
       required: true,
-      min: [1, "Quantity must be at least 1"],
-      validate: {
-        validator: Number.isInteger,
-        message: "Quantity must be a whole number"
-      }
+      min: [0.01, "Quantity must be greater than zero"]
     },
 
     previousStock: {

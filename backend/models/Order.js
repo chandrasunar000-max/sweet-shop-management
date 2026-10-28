@@ -20,15 +20,10 @@ const orderItemSchema = new mongoose.Schema(
       required: true,
       min: 0
     },
-
     quantity: {
       type: Number,
       required: true,
-      min: 1,
-      validate: {
-        validator: Number.isInteger,
-        message: "Quantity must be a whole number"
-      }
+      min: [0.01, "Quantity must be greater than zero"]
     },
 
     subtotal: {
