@@ -164,3 +164,4 @@ The Sweet Shop Management System contains five initial database models: User, Ca
 - Order items are embedded documents inside the Order model.
 - Inventory transactions record stock changes for traceability.
 - Stock updates must be validated to prevent inventory from becoming negative.
+[View Database Relationship Diagram](./sweet-shop.drawio)
